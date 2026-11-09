@@ -1,0 +1,33 @@
+{
+  "productCode": "A000660",
+  "sourceKind": "user_supplied_browser_response",
+  "sourceFile": "A000660_2026-11-03.browser.json",
+  "liveServerCollectionVerified": false,
+  "baseDate": "2026-11-03",
+  "sourceUpdatedAt": "2026-11-03T15:34:38.000+09:00",
+  "unit": "shares",
+  "buyMinusSellEqualsNet": {
+    "individuals": true,
+    "foreigner": true,
+    "institution": true
+  },
+  "institutionDetailBuySum": 621116,
+  "institutionBuySumMatches": true,
+  "institutionDetailNetSum": -196597,
+  "institutionNetSumMatches": true,
+  "markedCompleteAfterRegularClose": true,
+  "displayedCategoryNetSum": -1857,
+  "categoryNetSumMeaning": "Categories do not fully offset; preserve the difference and do not invent another investor category.",
+  "nextPage": {
+    "number": 2,
+    "size": 1,
+    "key": "2026-11-02"
+  },
+  "hasMorePages": true,
+  "rawNullFieldsPreserved": [
+    "buyBalanceQuantity",
+    "buyBalanceRate",
+    "sellBalanceQuantity",
+    "sellBalanceRate"
+  ]
+}

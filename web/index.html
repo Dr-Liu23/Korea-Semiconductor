@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111e2c"><meta name="description" content="海力士与三星电子：KRX常规收盘价、独立盘后报价、投资者资金流向、新闻与回购披露。">
+  <title>韩国半导体观察 · 海力士与三星</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23142a48'/%3E%3Cpath d='M9 29V17h5v12m4 0V10h5v19m4 0V21h5v8' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/style.css?v=20261109a">
+  <script defer src="/assets/vendor/echarts.min.js"></script><script defer src="/assets/flow-detail.js?v=20261104a"></script><script defer src="/assets/kline.js?v=20261105a"></script><script defer src="/assets/app.js?v=20261105c"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#overview"><span class="brand-mark"><i></i><i></i><i></i></span><span>芯片观察<small>KOREA MEMORY</small></span></a>
+  <div class="nav-caption">研究工作台</div>
+  <nav aria-label="主导航">
+    <a class="nav-item active" href="#overview"><span>◫</span>市场概览</a>
+    <a class="nav-item" href="#kline"><span>▮</span>K线行情</a>
+    <a class="nav-item" href="#latest-flows"><span>▦</span>最新流向</a>
+    <a class="nav-item" href="#flows"><span>▥</span>历史流向</a>
+    <a class="nav-item" href="#news"><span>▤</span>新闻与公告</a>
+    <a class="nav-item" href="#repurchases"><span>↻</span>回购追踪</a>
+  </nav>
+  <div class="sidebar-bottom"><span class="live-dot"></span> 收盘研究看板<small>KRX · 韩元 / 股数</small></div>
+</aside>
+<main>
+  <header class="topbar"><span class="breadcrumb">市场观察 <b>/</b> 韩国半导体</span><div class="top-actions"><span id="sync-time">正在载入数据…</span><button id="refresh" class="button button-small" type="button"><span>↻</span> 刷新显示</button></div></header>
+  <div class="workspace">
+    <section id="overview" class="section">
+      <div class="page-heading"><div><div class="eyebrow">SEMICONDUCTOR WATCH</div><h1>韩国半导体观察<span>海力士 × 三星电子</span></h1></div></div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <p id="price-polling" class="subtle">最新价每 3 秒主动采集，页面自动更新。</p>
+      <div id="stock-cards" class="stock-cards"><div class="card skeleton"></div><div class="card skeleton"></div></div>
+    </section>
+    <section id="kline" class="section">
+      <div class="section-heading"><div><div class="eyebrow">PRICE CHART</div><h2>K线行情</h2><p>日线为当日分时走势，日线、五日同时显示 KRX 与 NXT，日K、周K、月K可拖动或滚轮缩放查看全部历史，随所选股票切换。</p></div><div class="company-switch" id="kline-company-switch"></div></div>
+      <article class="card kline-card"><div class="kline-toolbar"><div id="kline-periods" class="segmented"><button data-kline="minute" class="selected" aria-pressed="true">日线</button><button data-kline="five" aria-pressed="false">五日</button><button data-kline="day" aria-pressed="false">日K</button><button data-kline="week" aria-pressed="false">周K</button><button data-kline="month" aria-pressed="false">月K</button></div><div id="kline-summary" class="kline-summary"></div></div><div id="kline-chart" class="chart kline-chart" role="img" aria-label="所选股票的价格走势与成交量图"></div><div id="kline-note" class="card-foot"></div></article>
+    </section>
+      <div class="section-heading"><div><div class="eyebrow">LATEST INVESTOR FLOWS</div><h2>最新资金流向明细</h2><p>最新完整交易日的买入、卖出与净买入，随所选股票切换。</p></div><div class="company-switch" id="latest-company-switch"></div></div>
+      <article class="card latest-flow-card"><div class="card-heading"><div><h3 id="latest-flow-title">投资者买卖明细</h3><p id="latest-flow-caption">正在载入最新交易日数据…</p></div><span class="mini-label">单位：万股</span></div><div class="table-scroll"><table class="latest-flow-table"><thead><tr><th scope="col">投资者类别</th><th scope="col">买入</th><th scope="col">卖出</th><th scope="col">净买入</th></tr></thead><tbody id="latest-flow-table"><tr><td colspan="4">正在载入…</td></tr></tbody></table></div><div class="latest-flow-foot">带 * 的卖出量按“买入 − 净买入”计算。机构细分包含于机构合计，不重复汇总。显示精确至 1 股，不受历史区间筛选影响。</div></article>
+    </section>
+    <section id="flows" class="section">
+      <div class="section-heading"><div><div class="eyebrow">HISTORICAL INVESTOR FLOWS</div><h2>历史资金流向</h2><p>展示净买卖股数，不等同于韩元资金净额。</p></div><div class="company-switch" id="flow-company-switch"></div></div>
+      <div class="range-toolbar"><div class="range-heading"><span class="label">观察区间</span><div id="range-presets" class="segmented"><button data-days="5">5日</button><button data-days="10">10日</button><button data-days="20" class="selected">20日</button></div></div></div>
+      <div class="flow-summary" id="flow-summary"></div>
+      <div id="flow-charts" class="flow-grid"></div>
+      <article class="card data-card"><div class="card-heading"><div><h2>逐日明细</h2><p id="table-caption">最新日期在前 · 单位：万股</p></div><a id="export" class="button button-small" href="#">↓ 下载 CSV</a></div><div class="table-scroll"><table><thead><tr><th>交易日期</th><th>KRX 常规收盘价 / ₩</th><th>涨跌幅</th><th>个人</th><th>外资</th><th>机构</th><th>其他法人</th></tr></thead><tbody id="flow-table"></tbody></table></div><button id="table-more" class="table-more" type="button">展开全部区间数据</button></article>
+    </section>
+    <section id="news" class="section">
+      <div class="section-heading"><div><div class="eyebrow">NEWS & DISCLOSURES</div><h2>新闻与公告</h2><p>中文标题、原文链接；市场报道与公司披露分开展示。</p></div><span class="small-note">新闻标题为机器翻译，可对照原文</span></div>
+      <div class="news-grid"><article class="card"><div class="card-heading"><h3>最新新闻</h3><div id="news-filter" class="segmented"><button data-news="all" class="selected">全部</button><button data-news="A000660">海力士</button><button data-news="A005930">三星</button></div></div><div id="news-list" class="news-list"><div class="empty">正在同步新闻标题…</div></div></article><article class="card"><div class="card-heading"><div><h3>公司披露</h3><p id="filings-company"></p></div><span class="mini-label">官方来源</span></div><div id="filings-list" class="filings-list"></div></article></div>
+    </section>
+    <section id="repurchases" class="section">
+      <div class="section-heading"><div><div class="eyebrow">SHAREHOLDER RETURNS</div><h2>回购与注销追踪</h2><p>按批次跟踪。购入完成、股份注销和员工激励分别记录。</p></div><span class="small-note">以各卡片披露截至日为准</span></div>
+      <div id="repurchase-cards" class="repurchase-grid"></div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-meta"><span>芯片观察 · Korea Memory Watch</span><span>SK hynix 000660 &nbsp; / &nbsp; Samsung Electronics 005930</span></div>
+      <p class="footer-disclaimer">免责声明：数据由公开资料整理，仅供参考，不做投资建议。股市有风险，决策需谨慎。</p>
+    </footer>
+  </div>
+</main>
+</body></html>

@@ -1,0 +1,6 @@
+[
+  {"code":"A000660","date":"2026-11-02","close":1472000,"asOf":"2026-11-02T15:30:00+09:00","exchange":"KRX","session":"REGULAR_CLOSE","source":"Naver KRX 15:30 audit capture","sourceUrl":"https://api.stock.naver.com/chart/domestic/item/000660?periodType=day","observedOn":"2026-11-03"},
+  {"code":"A000660","date":"2026-11-03","close":1398000,"previousClose":1472000,"asOf":"2026-11-03T15:30:00+09:00","exchange":"KRX","session":"REGULAR_CLOSE","source":"Naver KRX 15:30 audit capture","sourceUrl":"https://api.stock.naver.com/chart/domestic/item/000660?periodType=day","observedOn":"2026-11-03"},
+  {"code":"A005930","date":"2026-11-02","close":229000,"asOf":"2026-11-02T15:30:00+09:00","exchange":"KRX","session":"REGULAR_CLOSE","source":"Naver KRX 15:30 audit capture","sourceUrl":"https://api.stock.naver.com/chart/domestic/item/005930?periodType=day","observedOn":"2026-11-03"},
+  {"code":"A005930","date":"2026-11-03","close":219500,"previousClose":229000,"asOf":"2026-11-03T15:30:00+09:00","exchange":"KRX","session":"REGULAR_CLOSE","source":"Naver KRX 15:30 audit capture","sourceUrl":"https://api.stock.naver.com/chart/domestic/item/005930?periodType=day","observedOn":"2026-11-03"}
+]

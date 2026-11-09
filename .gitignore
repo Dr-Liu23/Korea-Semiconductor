@@ -1,0 +1,31 @@
+.cache/
+.venv/
+.state/
+**/toss-device-id
+runtime/
+__pycache__/
+.env
+.env.*
+!.env.example
+
+# Local databases, diagnostic reports, and logs
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.db
+*.db-wal
+*.db-shm
+*.log
+/data/diagnostics/
+/toss-browser-probe.json
+
+# Private credentials and local configuration
+.ssh/
+id_rsa
+id_ed25519
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+*service-account*.json
